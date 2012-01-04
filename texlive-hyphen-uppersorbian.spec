@@ -45,12 +45,12 @@ encodings.
 %install
 mkdir -p %{buildroot}%{_texmf_language_dat_d}
 cat > %{buildroot}%{_texmf_language_dat_d}/hyphen-uppersorbian <<EOF
-%% from hyphen-uppersorbian:
+\%\% from hyphen-uppersorbian:
 uppersorbian loadhyph-hsb.tex
 EOF
 mkdir -p %{buildroot}%{_texmf_language_def_d}
 cat > %{buildroot}%{_texmf_language_def_d}/hyphen-uppersorbian <<EOF
-%% from hyphen-uppersorbian:
+\%\% from hyphen-uppersorbian:
 \addlanguage{uppersorbian}{loadhyph-hsb.tex}{}{2}{2}
 EOF
 mkdir -p %{buildroot}%{_texmf_language_lua_d}
