@@ -5,8 +5,8 @@
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-hyphen-uppersorbian
-Version:	20111103
-Release:	2
+Version:	20120124
+Release:	1
 Summary:	Upper Sorbian hyphenation patterns
 Group:		Publishing
 URL:		http://tug.org/texlive
@@ -45,14 +45,16 @@ encodings.
 %install
 mkdir -p %{buildroot}%{_texmf_language_dat_d}
 cat > %{buildroot}%{_texmf_language_dat_d}/hyphen-uppersorbian <<EOF
-\%\% from hyphen-uppersorbian:
+\%% from hyphen-uppersorbian:
 uppersorbian loadhyph-hsb.tex
 EOF
+perl -pi -e 's|\\%%|%%|;' %{buildroot}%{_texmf_language_dat_d}/hyphen-uppersorbian
 mkdir -p %{buildroot}%{_texmf_language_def_d}
 cat > %{buildroot}%{_texmf_language_def_d}/hyphen-uppersorbian <<EOF
-\%\% from hyphen-uppersorbian:
+\%% from hyphen-uppersorbian:
 \addlanguage{uppersorbian}{loadhyph-hsb.tex}{}{2}{2}
 EOF
+perl -pi -e 's|\\%%|%%|;' %{buildroot}%{_texmf_language_def_d}/hyphen-uppersorbian
 mkdir -p %{buildroot}%{_texmf_language_lua_d}
 cat > %{buildroot}%{_texmf_language_lua_d}/hyphen-uppersorbian <<EOF
 -- from hyphen-uppersorbian:
