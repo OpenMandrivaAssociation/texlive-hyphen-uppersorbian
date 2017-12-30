@@ -5,8 +5,8 @@
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-hyphen-uppersorbian
-Version:	20120124
-Release:	9
+Version:	20170414
+Release:	1
 Summary:	Upper Sorbian hyphenation patterns
 Group:		Publishing
 URL:		http://tug.org/texlive
